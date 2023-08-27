@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+def secretProperties = new Properties()
+try {
+    secretProperties.load(new FileInputStream(rootProject.file("secret.properties")))
+} catch (FileNotFoundException ignored) {
+    //secretProperties.load(new FileInputStream(rootProject.file("secret.example.properties")))
+}
+android {
+    namespace 'jlpt.quiz.japanese.learn'
+    compileSdk 33
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+        applicationId "jlpt.quiz.japanese.learn"
+        minSdk 26
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+
+        resValue("string", "main_banner_id", secretProperties['MAIN_BANNER_ID'])
+        resValue("string", "more_banner_id", secretProperties['MORE_BANNER_ID'])
+        resValue("string", "set_wallpaper_banner_id", secretProperties['SET_WALLPAPER_BANNER_ID'])
+        resValue("string", "open_app_ad_id", secretProperties['OPEN_APP_AD_ID'])
+        resValue("string", "set_wallpaper_interstitial_id", secretProperties['SET_WALLPAPER_INTERSTITIAL_ID'])
+        resValue("string", "native_ad_id", secretProperties['NATIVE_AD_ID'])
+        resValue("string", "rewarded_ad_id", secretProperties['REWARDED_AD_ID'])
+        resValue("integer", "splash_screen_timeout", secretProperties['SPLASH_SCREEN_TIMEOUT'])
+        resValue("integer", "interstitial_after_clicks", secretProperties['INTERSTITIAL_AFTER_CLICKS'])
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        buildConfig true
+        viewBinding true
+    }
+    namespace 'jlpt.quiz.japanese.learn'
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+
+    //
+    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.preference:preference:1.2.0'
+
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+
+    implementation "androidx.lifecycle:lifecycle-process:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.5.1"
+
+}
