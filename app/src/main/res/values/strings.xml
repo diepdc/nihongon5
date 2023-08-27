@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">JLPT N3-N5 (Japanese Quiz)</string>
+    <string name="app_name">Ngữ pháp N5 (tổng hợp)</string>
     <string name="jiyu">自由</string>
     <string name="kanji">漢字</string>
     <string name="bunpo">文法</string>
+    <string name="p2"><u>Bấm vào đây để xem Phần 2</u></string>
 </resources>
