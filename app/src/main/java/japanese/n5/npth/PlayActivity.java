@@ -25,8 +25,8 @@ import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import jlpt.quiz.japanese.learn.R;
-import jlpt.quiz.japanese.learn.databinding.ActivityNp2Binding;
+import japanese.n5.npth.databinding.ActivityNp2Binding;
+
 
 public class PlayActivity extends AppCompatActivity {
     ActivityNp2Binding binding;

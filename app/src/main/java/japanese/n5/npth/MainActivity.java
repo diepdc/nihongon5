@@ -11,7 +11,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.MobileAds;
 
-import jlpt.quiz.japanese.learn.databinding.ActivityMainBinding;
+import japanese.n5.npth.databinding.ActivityMainBinding;
+
 
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;

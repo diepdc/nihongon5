@@ -8,11 +8,11 @@ try {
     //secretProperties.load(new FileInputStream(rootProject.file("secret.example.properties")))
 }
 android {
-    namespace 'jlpt.quiz.japanese.learn'
+    namespace 'japanese.n5.npth'
     compileSdk 33
     buildToolsVersion "30.0.3"
     defaultConfig {
-        applicationId "jlpt.quiz.japanese.learn"
+        applicationId "japanese.n5.npth"
         minSdk 26
         targetSdk 33
         versionCode 1
@@ -46,7 +46,7 @@ android {
         buildConfig true
         viewBinding true
     }
-    namespace 'jlpt.quiz.japanese.learn'
+    namespace 'japanese.n5.npth'
 }
 
 dependencies {
