@@ -15,8 +15,8 @@ android {
         applicationId "japanese.n5.npth"
         minSdk 26
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.2"
 
 
         resValue("string", "main_banner_id", secretProperties['MAIN_BANNER_ID'])
